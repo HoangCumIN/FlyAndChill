@@ -1,0 +1,1284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap'); font-family: "Titillium Web", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menuHeadWeb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.titleLogo {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 25px;
+    margin-left: 5px;
+    color: rgb(197, 17, 71);
+}
+
+.address h1 {
+    font-family: "Poetsen One", sans-serif;
+}
+
+.logoHeadWeb {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.menu {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.logoHeadWeb .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.menu>ul {
+    display: flex;
+}
+
+.menu>ul>li>a {
+    color: black;
+    font-size: 18px;
+    padding: 22px;
+    font-weight: 500;
+    position: relative;
+}
+
+@keyframes outDoor {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.menu>ul>li>a::before {
+    content: "";
+    background-color: rgb(197, 17, 71);
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    display: none;
+    animation: outDoor ease 0.3s;
+}
+
+.menu>ul>li:hover>a::before {
+    width: 100%;
+    display: block;
+}
+
+.logIn {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.dn button {
+    border: 2px solid rgb(197, 17, 71);
+    background-color: white;
+    height: 45px;
+    width: 110px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dn button:hover {
+    transform: scale(0.95);
+}
+
+.dk button {
+    background-color: rgb(197, 17, 71);
+    height: 45px;
+    width: 80px;
+    border-radius: 10px;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dk button:hover {
+    transform: scale(0.95);
+}
+
+.search #btSearch {
+    height: 35px;
+    width: 35px;
+    background-color: rgb(197, 17, 71);
+    border-radius: 50%;
+    color: white;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search #btSearch:hover {
+    transform: scale(0.95);
+}
+
+.menu>ul>li>a:hover {
+    color: rgb(197, 17, 71);
+}
+
+.menu ul li {
+    position: relative;
+}
+
+ul.dropDown {
+    position: absolute;
+    background-color: white;
+    min-width: max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: 43px;
+    display: none;
+    transition: 0.3s;
+    border-radius: 0 10px 10px 10px;
+    overflow: hidden;
+}
+
+.menu ul li:hover ul.dropDown {
+    display: block;
+}
+
+ul.dropDown li:hover {
+    background-color: rgb(197, 17, 71);
+}
+
+ul.dropDown li a {
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    display: flex;
+}
+
+ul.dropDown li a:hover {
+    color: white;
+}
+
+ul.dropDown li {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(197, 17, 71);
+    transition: 0.3s;
+}
+
+ul.dropDown li:last-child {
+    border: none;
+}
+
+.search {
+    position: relative;
+}
+
+#inputSearch {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    height: 40px;
+    border: 1px solid black;
+    top: 65px;
+    min-width: 233px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+}
+
+#inputSearch.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#inputSearch input {
+    position: absolute;
+    outline: none;
+    padding-left: 10px;
+    width: 154px;
+    height: 38px;
+    background-color: white;
+}
+
+#btSearch2 {
+    position: absolute;
+    right: 38px;
+    width: 39px;
+    height: 38px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#btClose {
+    position: absolute;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    color: rgb(197, 17, 71);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.popup-login {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.popup-login.showPopupLogin {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.form-login {
+    position: absolute;
+    top: 0px;
+    left: 40%;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.popup-login.showPopupLogin .form-login {
+    top: 20%;
+}
+
+.header-form-login {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.header-form-login p {
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.header-form-login button {
+    background-color: white;
+    color: rgb(197, 17, 71);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.name-login p {
+    color: rgb(129, 129, 129);
+    margin-bottom: 5px;
+}
+
+.name-login input {
+    border: 1px solid rgb(119, 119, 119);
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.name-login input:hover {
+    border: 1px solid rgb(197, 17, 71);
+}
+
+.pass-login p {
+    color: rgb(129, 129, 129);
+    margin-bottom: 5px;
+}
+
+.pass-login input {
+    border: 1px solid rgb(119, 119, 119);
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.pass-login input:hover {
+    border: 1px solid rgb(197, 17, 71);
+}
+
+.input-form-login .bt-login {
+    background-color: rgb(197, 17, 71);
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-form-login .bt-login:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.or-login {
+    position: relative;
+}
+
+.or-login p {
+    text-align: center;
+    color: rgb(145, 145, 145);
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.or-login p::before {
+    width: 103px;
+    height: 0.5px;
+    content: "";
+    background-color: rgb(145, 145, 145);
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+}
+
+.or-login p::after {
+    width: 103px;
+    height: 0.5px;
+    content: "";
+    background-color: rgb(145, 145, 145);
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+}
+
+.bt-login-gf {
+    text-align: center;
+}
+
+.login-with-gg button {
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgb(197, 17, 71);
+    height: 30px;
+    color: rgb(197, 17, 71);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.login-with-gg button:hover {
+    background-color: rgb(197, 17, 71);
+    color: white;
+}
+
+.login-with-fb button {
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgb(197, 17, 71);
+    height: 30px;
+    color: rgb(197, 17, 71);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.login-with-fb button:hover {
+    background-color: rgb(197, 17, 71);
+    color: white;
+}
+
+.popup-register {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.popup-register.showPopupRegister {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.form-register {
+    position: absolute;
+    top: 0px;
+    left: 40%;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.popup-register.showPopupRegister .form-register {
+    top: 15%;
+}
+
+.header-form-register {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.header-form-register p {
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.header-form-register button {
+    background-color: white;
+    color: rgb(197, 17, 71);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.name-register p {
+    color: rgb(129, 129, 129);
+    margin-bottom: 5px;
+}
+
+.name-register input {
+    border: 1px solid rgb(119, 119, 119);
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.name-register input:hover {
+    border: 1px solid rgb(197, 17, 71);
+}
+
+.pass-register p {
+    color: rgb(129, 129, 129);
+    margin-bottom: 5px;
+}
+
+.pass-register input {
+    border: 1px solid rgb(119, 119, 119);
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.pass-register input:hover {
+    border: 1px solid rgb(197, 17, 71);
+}
+
+.input-form-register .bt-register {
+    background-color: rgb(197, 17, 71);
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-form-register .bt-register:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.or-register {
+    position: relative;
+}
+
+.or-register p {
+    text-align: center;
+    color: rgb(145, 145, 145);
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.or-register p::before {
+    width: 103px;
+    height: 0.5px;
+    content: "";
+    background-color: rgb(145, 145, 145);
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+}
+
+.or-register p::after {
+    width: 103px;
+    height: 0.5px;
+    content: "";
+    background-color: rgb(145, 145, 145);
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+}
+
+.bt-register-gf {
+    text-align: center;
+}
+
+.register-with-gg button {
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgb(197, 17, 71);
+    height: 30px;
+    color: rgb(197, 17, 71);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.register-with-gg button:hover {
+    background-color: rgb(197, 17, 71);
+    color: white;
+}
+
+.register-with-fb button {
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgb(197, 17, 71);
+    height: 30px;
+    color: rgb(197, 17, 71);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.register-with-fb button:hover {
+    background-color: rgb(197, 17, 71);
+    color: white;
+}
+
+.bannerHeadWeb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerHeadWeb img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home-search {
+    position: relative;
+    top: -30px;
+}
+
+.home-search-menu ul {
+    justify-content: center;
+    display: flex;
+}
+
+.home-search-menu {
+    transform: translateX(32%);
+    width: 60%;
+    height: 61px;
+    background-color: white;
+    border-radius: 15px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+}
+
+.home-search-menu>ul>li>a {
+    color: black;
+    font-size: 22px;
+    padding: 22px;
+    font-weight: 600;
+    position: relative;
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 55px;
+    transition: 0.3s;
+}
+
+@keyframes outDoor2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+.home-search-menu>ul>li>a:hover {
+    color: rgb(197, 17, 71);
+}
+
+.home-search-menu>ul>li>.a-ticket.show-ft-ticketp {
+    color: rgb(197, 17, 71);
+}
+
+.home-search-menu>ul>li>.a-hotel.show-ft-hotelp {
+    color: rgb(197, 17, 71);
+}
+
+.home-search-menu>ul>li>.a-tour.show-ft-tourp {
+    color: rgb(197, 17, 71);
+}
+
+.home-search-menu>ul>li>a::before {
+    content: "";
+    background-color: rgb(197, 17, 71);
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 17px;
+    display: none;
+    animation: outDoor2 ease 0.3s;
+}
+
+.home-search-menu>ul>li>.a-ticket.show-ft-ticket::before {
+    content: "";
+    background-color: rgb(197, 17, 71);
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 17px;
+    display: block;
+    width: 80%;
+}
+
+.home-search-menu>ul>li>.a-hotel.show-ft-hotel::before {
+    content: "";
+    background-color: rgb(197, 17, 71);
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 17px;
+    display: block;
+    width: 80%;
+}
+
+.home-search-menu>ul>li>.a-tour.show-ft-tour::before {
+    content: "";
+    background-color: rgb(197, 17, 71);
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 17px;
+    display: block;
+    width: 80%;
+}
+
+.home-search-menu>ul>li:hover>a::before {
+    width: 80%;
+    display: block;
+}
+
+
+/*ticket*/
+
+.fly-ticket {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    transform: translateX(32%);
+    width: 60%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    z-index: 51;
+}
+
+.info-search-ticket {
+    margin: 20px;
+}
+
+.info-search-ticket-top {
+    display: flex;
+    border-bottom: 0.6px solid rgb(222, 222, 222);
+    padding-bottom: 20px;
+}
+
+.info-search-ticket-bot {
+    display: flex;
+    padding-top: 20px;
+}
+
+.go {
+    display: flex;
+    margin-right: 20px;
+}
+
+.to {
+    display: flex;
+}
+
+.date-go {
+    display: flex;
+    margin-right: 20px;
+}
+
+.date-back {
+    display: flex;
+    margin-right: 20px;
+}
+
+.count-people {
+    display: flex;
+}
+
+.home-search i {
+    color: rgb(150, 150, 150);
+    font-size: 34px;
+    margin-right: 10px;
+}
+
+.nameP p {
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.input-home-search input {
+    height: 25px;
+    outline: none;
+}
+
+.btn-home-search-ticket button {
+    margin-top: 100px;
+    margin-right: 20px;
+    font-size: 18px;
+    background-color: rgb(197, 17, 71);
+    color: white;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-home-search-ticket button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fly-ticket.showTicket {
+    opacity: 1;
+    pointer-events: all;
+    top: 61px;
+}
+
+
+/*hotel*/
+
+.hotel {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    transform: translateX(32%);
+    position: absolute;
+    top: 0px;
+    width: 60%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    z-index: 50;
+}
+
+.info-search-hotel {
+    margin: 20px;
+}
+
+.info-search-hotel-top {
+    display: flex;
+    border-bottom: 0.6px solid rgb(222, 222, 222);
+    padding-bottom: 20px;
+}
+
+.info-search-hotel-bot {
+    display: flex;
+    padding-top: 20px;
+}
+
+.location {
+    display: flex;
+    margin-right: 20px;
+}
+
+.date-receive {
+    display: flex;
+    margin-right: 20px;
+}
+
+.date-restore {
+    display: flex;
+    margin-right: 20px;
+}
+
+.count-people {
+    display: flex;
+}
+
+.hotel.showHotel {
+    opacity: 1;
+    pointer-events: all;
+    top: 61px;
+}
+
+
+/*tour*/
+
+.tour {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    transform: translateX(32%);
+    position: absolute;
+    top: 0px;
+    width: 60%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    z-index: 50;
+}
+
+.info-search-tour {
+    margin: 20px;
+    display: flex;
+}
+
+.locationTour {
+    display: flex;
+    margin-right: 20px;
+}
+
+.location-go {
+    display: flex;
+    margin-right: 20px;
+}
+
+.btn-home-search-tour button {
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    background-color: rgb(197, 17, 71);
+    color: white;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-home-search-tour button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tour.showTour {
+    opacity: 1;
+    pointer-events: all;
+    top: 61px;
+}
+
+.introduce {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    position: relative;
+    top: -150px;
+    z-index: -1;
+}
+
+.solgan {
+    display: flex;
+    align-items: center;
+}
+
+.introduce-list {
+    display: flex;
+}
+
+.logo-slogan img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.title-slogan {
+    margin-left: 10px;
+    padding-right: 30px;
+    border-right: 1px solid rgb(197, 17, 71);
+}
+
+.title-slogan p {
+    margin: 8px 0;
+    font-size: 20px;
+    color: rgb(197, 17, 71);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title-slogan-top {
+    font-family: sans-serif;
+}
+
+.title-slogan-bot {
+    font-weight: bold;
+}
+
+.img-introduce-list1 img {
+    width: 42px;
+    height: 42px;
+}
+
+.introduce-list1 {
+    width: 170px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.hot-sale {
+    text-align: center;
+    position: relative;
+    top: -90px;
+}
+
+.title-hot-sale p {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+}
+
+.title-hot-sale span {
+    color: rgb(197, 17, 71);
+}
+
+.list-hot-sale img {
+    width: 367px;
+    height: 181px;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.list-hot-sale img:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.airline-partners {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+
+.title-airline-partners {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.airline-partners-left {
+    width: 410px;
+    margin-left: 15px;
+}
+
+.info-airline-partners {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.list-airline-partners img {
+    width: 130px;
+    height: 73px;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.25s;
+    border-radius: 10px;
+}
+
+.list-airline-partners.bot img {
+    width: 130px;
+    height: 73px;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+
+.list-airline-partners img:hover {
+    border: 1px solid rgb(197, 17, 71);
+    transform: scale(1.03);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+/*g*/
+
+.hotel-partners {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    border-top: 1px solid rgb(190, 190, 190);
+    padding: 30px;
+}
+
+.title-hotel-partners {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.hotel-partners-left {
+    width: 410px;
+    margin-left: 15px;
+}
+
+.info-hotel-partners {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.list-hotel-partners img {
+    width: 130px;
+    height: 73px;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.25s;
+    border-radius: 10px;
+}
+
+.list-hotel-partners.bot img {
+    width: 130px;
+    height: 73px;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+
+.list-hotel-partners img:hover {
+    border: 1px solid rgb(197, 17, 71);
+    transform: scale(1.03);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.prize {
+    text-align: center;
+}
+
+.prize-list {
+    display: flex;
+    justify-content: center;
+}
+
+.prize-list1 {
+    width: 212px;
+    height: 160px;
+    margin: 0 20px;
+}
+
+.img-prize img {
+    width: 96px;
+    height: 80px;
+}
+
+.prize-title {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin: 50px 0;
+}
+
+.info-prize {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.footerWeb {
+    background-color: rgb(197, 17, 71);
+}
+
+.form-dk-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    border: 1px solid rgb(197, 17, 71);
+    height: 100px;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.info-dk-email {
+    display: flex;
+    align-items: center;
+}
+
+.icon-info-dk-email {
+    font-size: 50px;
+    color: rgb(197, 17, 71);
+    padding: 0 15px;
+    line-height: 20px;
+}
+
+.text-info-dk-email {
+    font-family: sans-serif;
+}
+
+.text-info-dk-email-top {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.text-info-dk-email-top span {
+    font-size: 30px;
+    color: rgb(197, 17, 71);
+}
+
+.input-dk-email {
+    margin-left: 30px;
+}
+
+.input-dk-email input {
+    width: 300px;
+    height: 50px;
+    outline: none;
+    background-color: rgb(255, 236, 236);
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.input-dk-email button {
+    width: 130px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(197, 17, 71);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.input-dk-email button:hover {
+    transform: scale(0.96);
+}
+
+.icon-bar button {
+    font-size: 20px;
+    padding: 22px;
+    cursor: pointer;
+    display: none;
+    background-color: white;
+}
+
+.nav-res {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.nav-mobi {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    transition: 0.3 ease-in-out;
+}
+
+.colse-nav-mobi i {
+    font-size: 30px;
+}
+
+.colse-nav-mobi {
+    position: absolute;
+    right: 0;
+    padding: 18px;
+}
+
+.menu-mobi {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+
+.menu-mobi ul li a {
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.menu-mobi ul li {
+    padding: 0px 30px 0 30px;
+    border-bottom: 1px solid rgb(208, 208, 208);
+    margin-bottom: 20px;
+    line-height: 50px;
+}
+
+.nav-res.showNavMobi {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.info-footer {
+    color: white;
+}
+
+.info-cty {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-cty p {
+    margin: 14px 0;
+}
+
+.dowload {
+    margin-top: 40px;
+}

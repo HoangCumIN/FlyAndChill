@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/res.css">
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" integrity="sha512-BWbLJlfp8hzXlxT6K5KLdxPVAj+4Zn2e4FVq5P7NSFH/mkAJ18UiZRQUD4anR3jyp0/WYkeZ0Zmq5EWWrDxneQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <![endif]-->
+    <title>Fly And Chill</title>
+</head>
+
+<body>
+    <div class="all">
+        <div class="headWeb">
+            <div class="menuHeadWeb">
+                <div class="logoHeadWeb">
+                    <a href="">
+                        <div class="logo">
+                            <img src="./img/logoEdit.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="titleLogo">
+                            <p>FlyAndChill.vn</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="vemaybay">
+                            <a href=""><i class="fa-solid fa-plane"></i> Vé máy bay</a>
+                            <ul class="dropDown">
+                                <li><a href="#">Đặt vé máy bay trong nước</a></li>
+                                <li><a href="">Đặt vé máy bay nước ngoài</a></li>
+                                <li><a href="">Vé đã đặt</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="khachsan">
+                            <a href=""><i class="fa-solid fa-hotel"></i> Khách sạn</a>
+                            <ul class="dropDown">
+                                <li><a href="">Khách sạn trong nước</a></li>
+                                <li><a href="">Khách sạn nước ngoài</a></li>
+                                <li><a href="">Khách sạn đã đặt</a></li>
+                            </ul>
+                        </li>
+                        <li class="tourdulich">
+                            <a href=""><i class="fa-solid fa-map-location"></i> Tour du lịch</a>
+                            <ul class="dropDown">
+                                <li><a href="">Tour du lịch trong nước</a></li>
+                                <li><a href="">Tour du lịch nước ngoài</a></li>
+                                <li><a href="">Tour du lịch đã đặt</a></li>
+                            </ul>
+                        </li>
+                        <li class="thuexe">
+                            <a href=""><i class="fa-solid fa-car-side"></i> Thuê xe</a>
+                            <ul class="dropDown">
+                                <li><a href="">Thuê xe trong nước</a></li>
+                                <li><a href="">Thuê xe nước ngoài</a></li>
+                                <li><a href="">Xe đã thuê</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-solid fa-tags"></i> Combo khuyến mãi</a>
+                            <ul class="dropDown">
+                                <li><a href="">Combo mùa lễ hội</a></li>
+                                <li><a href="">Combo trăng mật ngọt ngào</a></li>
+                                <li><a href="">Combo nghỉ dưỡng gần HCM</a></li>
+                                <li><a href="">Combo nghỉ dưỡng gần Hà Nội</a></li>
+                                <li><a href="">Top combo khuyến mại</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-solid fa-ellipsis"></i></a>
+                            <ul class="dropDown">
+                                <li><a href=""><i class="fa-regular fa-circle-question"></i> Trợ giúp</a></li>
+                                <li><a href="">Liên hệ chúng tôi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <div class="logIn">
+
+                    <div class="dn">
+                        <button><i class="fa-solid fa-user" style="color: #c51147;"></i> Đăng nhập</button>
+                    </div>
+                    <div class="dk">
+                        <button>Đăng ký</button>
+                    </div>
+                    <div class="search">
+                        <button id="btSearch"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                    </div>
+                    <div id="inputSearch" class="hide">
+                        <form action="" id="searchForm">
+                            <input id="inputText" type="text" placeholder="Bạn muốn tìm ?">
+                        </form>
+                        <button id="btSearch2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button id="btClose"><i class="fa-regular fa-circle-xmark"></i></button>
+
+                    </div>
+                </div>
+
+                <div class="icon-bar">
+                    <button><i class="fa-solid fa-bars"></i></button>
+                </div>
+
+                <div class="nav-res">
+                    <div class="nav-mobi">
+                        <div class="colse-nav-mobi"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="menu-mobi">
+                            <ul>
+                                <li class="vemaybay-mobi">
+                                    <a href=""><i class="fa-solid fa-plane"></i> Vé máy bay</a>
+                                </li>
+
+                                <li class="khachsan-mobi">
+                                    <a href=""><i class="fa-solid fa-hotel"></i> Khách sạn</a>
+                                </li>
+                                <li class="tourdulich-mobi">
+                                    <a href=""><i class="fa-solid fa-map-location"></i> Tour du lịch</a>
+                                </li>
+                                <li class="thuexe-mobi">
+                                    <a href=""><i class="fa-solid fa-car-side"></i> Thuê xe</a>
+                                </li>
+                                <li class="combo-mobi">
+                                    <a href=""><i class="fa-solid fa-tags"></i> Combo khuyến mãi</a>
+                                </li>
+
+                                <li class="help-mobi"><a href=""><i class="fa-regular fa-circle-question"></i> Trợ giúp</a></li>
+                                <li class="call-mobi"><a href="">Liên hệ chúng tôi</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="popup-login">
+                <div class="form-login">
+                    <div class="header-form-login">
+                        <p>Đăng nhập</p>
+                        <button class="btClosePopupLogin"><i class="fa-regular fa-circle-xmark"></i></button>
+                    </div>
+                    <div class="input-form-login">
+                        <div class="name-login">
+                            <p>Email/Số điện thoại di động</p>
+                            <input type="text">
+                        </div>
+                        <div class="pass-login">
+                            <p>Mật khẩu</p>
+                            <input type="password">
+                        </div>
+                        <input class="bt-login" type="submit" value="Đăng nhập">
+                    </div>
+                    <div class="or-login">
+                        <p>Hoặc đăng nhập với</p>
+                    </div>
+                    <div class="bt-login-gf">
+                        <div class="login-with-gg">
+                            <button><i class="fa-brands fa-google"></i> Đăng nhập với Google</button>
+                        </div>
+                        <div class="login-with-fb">
+                            <button><i class="fa-brands fa-facebook"></i> Đăng nhập với Facebook</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="popup-register">
+        <div class="form-register">
+            <div class="header-form-register">
+                <p>Đăng ký</p>
+                <button class="btClosePopupRegister"><i class="fa-regular fa-circle-xmark"></i></button>
+            </div>
+            <div class="input-form-register">
+                <div class="name-register">
+                    <p>Email/Số điện thoại di động</p>
+                    <input type="text">
+                </div>
+                <div class="pass-register">
+                    <p>Mật khẩu</p>
+                    <input type="password">
+                </div>
+                <div class="pass-register">
+                    <p>Nhập lại mật khẩu</p>
+                    <input type="password">
+                </div>
+                <input class="bt-register" type="submit" value="Đăng ký">
+            </div>
+            <div class="or-register">
+                <p>Hoặc đăng ký với</p>
+            </div>
+            <div class="bt-register-gf">
+                <div class="register-with-gg">
+                    <button><i class="fa-brands fa-google"></i> Đăng ký với Google</button>
+                </div>
+                <div class="register-with-fb">
+                    <button><i class="fa-brands fa-facebook"></i> Đăng ký với Facebook</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    </div>
+
+    <div class="bannerHeadWeb">
+        <img src="./img/The Art of Living (1).png" alt="">
+    </div>
+
+    <div class="home-search">
+        <div class="home-search-menu">
+            <ul>
+                <li><a class="a-ticket" href="#">Vé Máy Bay</a></li>
+                <li><a class="a-hotel" href="#">Khách Sạn</a></li>
+                <li><a class="a-tour" href="#">Tour Du Lịch</a></li>
+            </ul>
+        </div>
+        <div class="fly-ticket">
+            <div class="info-search-ticket">
+                <div class="info-search-ticket-top">
+                    <div class="go">
+                        <div class="icon-go">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <div class="form-go">
+                            <div class="label-go nameP">
+                                <p>ĐIỂM ĐI</p>
+                            </div>
+                            <div class="input-go input-home-search">
+                                <input type="text" placeholder="Nhập điểm đi">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="to">
+                        <div class="icon-to">
+                            <i class="fa-solid fa-plane-arrival"></i>
+                        </div>
+                        <div class="form-to">
+                            <div class="label-to nameP">
+                                <p>ĐIỂM ĐẾN</p>
+                            </div>
+                            <div class="input-to input-home-search">
+                                <input type="text" placeholder="Nhập điểm đến">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-search-ticket-bot">
+                    <div class="date-go">
+                        <div class="icon-date-go">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                        <div class="form-date-go nameP">
+                            <p>Ngày đi</p>
+                            <div class="input-date-go input-home-search">
+                                <input type="text" placeholder="Nhập ngày đi">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-back">
+                        <div class="icon-date-back">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                        <div class="form-date-back nameP">
+                            <p>Ngày về</p>
+                            <div class="input-date-back input-home-search">
+                                <input type="text" placeholder="Nhập ngày về">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="count-people">
+                        <div class="icon-count-people">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="form-count-people nameP">
+                            <p>Số hành khách</p>
+                            <div class="input-count-people input-home-search">
+                                <input type="text" placeholder="Nhập số lượng hành khách">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-home-search-ticket">
+                <button>Tìm chuyến bay</button>
+            </div>
+        </div>
+
+
+
+        <div class="hotel">
+            <div class="info-search-hotel">
+                <div class="info-search-hotel-top">
+                    <div class="location">
+                        <div class="icon-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="form-location">
+                            <div class="label-location nameP">
+                                <p>địa điểm</p>
+                            </div>
+                            <div class="input-location input-home-search">
+                                <input type="text" placeholder="Thành phố, địa danh, khách sạn">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info-search-hotel-bot">
+                    <div class="date-receive">
+                        <div class="icon-date-receive">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                        <div class="form-date-receive nameP">
+                            <p>Ngày nhận phòng</p>
+                            <div class="input-date-hotel input-home-search">
+                                <input type="text" placeholder="Nhập ngày nhận phòng">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-restore">
+                        <div class="icon-date-restore">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                        <div class="form-date-restore nameP">
+                            <p>Ngày trả phòng</p>
+                            <div class="input-date-restore input-home-search">
+                                <input type="text" placeholder="Nhập ngày trả phòng">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="count-people">
+                        <div class="icon-count-people">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="form-count-people nameP">
+                            <p>Số hành khách</p>
+                            <div class="input-count-people input-home-search">
+                                <input type="text" placeholder="Nhập số lượng hành khách">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-home-search-ticket">
+                <button>Tìm khách sạn</button>
+            </div>
+        </div>
+        <div class="tour">
+            <div class="info-search-tour">
+                <div class="locationTour">
+                    <div class="icon-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="form-location">
+                        <div class="label-location nameP">
+                            <p>địa điểm</p>
+                        </div>
+                        <div class="input-location input-home-search">
+                            <input type="text" placeholder="Bạn muốn đi đâu">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-go">
+                    <div class="icon-location-go">
+                        <i class="fa-solid fa-location-arrow"></i>
+                    </div>
+                    <div class="form-location-go nameP">
+                        <p>Khởi hành từ</p>
+                        <div class="input-location-go input-home-search">
+                            <input type="text" placeholder="Nhập nơi khởi hành">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-home-search-tour">
+                <button>Tìm tour ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="introduce">
+        <div class="solgan">
+            <div class="logo-slogan">
+                <img src="./img/logoEdit.jpg" alt="">
+            </div>
+            <div class="title-slogan">
+                <div class="title-slogan-top">
+                    <p>Khởi đầu một chặng đường</p>
+                </div>
+                <div class="title-slogan-bot">
+                    <p>CHINH PHỤC MỘT NIỀM TIN</p>
+                </div>
+            </div>
+        </div>
+        <div class="introduce-list">
+            <div class="introduce-list1">
+                <div class="img-introduce-list1">
+                    <img src="./img/luon-co-gia-tot-2.png" alt="">
+                </div>
+                <div class="title-introduce-list1">
+                    <p>Luôn có giá tốt</p>
+                </div>
+            </div>
+            <div class="introduce-list1">
+                <div class="img-introduce-list1">
+                    <img src="./img/cong-ty-du-lich-hang-dau-2.png" alt="">
+                </div>
+                <div class="title-introduce-list1">
+                    <p>Công ty du lịch hàng đầu Việt Nam</p>
+                </div>
+            </div>
+            <div class="introduce-list1">
+                <div class="img-introduce-list1">
+                    <img src="./img/99-hai-long-2.png" alt="">
+                </div>
+                <div class="title-introduce-list1">
+                    <p>99% khách hàng hài lòng</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="bodyWeb">
+        <div class="hot-sale">
+            <div class="title-hot-sale">
+                <p>Khuyến mại <span>HOT</span> tại FlyAndChill</p>
+            </div>
+            <div class="list-hot-sale">
+                <img src="./img/Blue and White Illustrated Travel Banner Landscape.png" alt="">
+                <img src="./img/Blue and White Modern Big Sale Banner.png" alt="">
+                <img src="./img/Pink and Yellow Pastel Organic Blob Mega Sale Banner.png" alt="">
+            </div>
+        </div>
+
+        <div class="airline-partners">
+            <div class="airline-partners-left">
+                <div class="title-airline-partners">
+                    <p>Đối tác hàng không</p>
+                </div>
+                <div class="info-airline-partners">
+                    <p>Với hệ thống tìm kiếm và so sánh giá linh hoạt, khách hàng sẽ đặt được vé máy bay giá rẻ nhất</p>
+                </div>
+            </div>
+            <div class="airline-partners-right">
+                <div class="list-airline-partners">
+                    <img src="./img/bamboo.png" alt="">
+                    <img src="./img/CX-2.png" alt="">
+                    <img src="./img/DD.png" alt="">
+                    <img src="./img/EK.png" alt="">
+                </div>
+                <div class="list-airline-partners bot">
+                    <img src="./img/EY.png" alt="">
+                    <img src="./img/PAC-2.png" alt="">
+                    <img src="./img/VU.png" alt="">
+                    <img src="./img/VNair.png" alt="">
+                </div>
+                <div class="list-airline-partners bot">
+                    <img src="./img/VJ.png" alt="">
+                    <img src="./img/TG.png" alt="">
+                    <img src="./img/SQ.png" alt="">
+                    <img src="./img/QR.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel-partners">
+            <div class="hotel-partners-left">
+                <div class="title-hotel-partners">
+                    <p>Đối tác khách sạn hàng đầu</p>
+                </div>
+                <div class="info-hotel-partners">
+                    <p>FlyAndChill liên kết chọn lọc với những đối tác uy tín, chất lượng để mang đến bạn những trải nghiệm tuyệt vời.</p>
+                </div>
+            </div>
+            <div class="hotel-partners-right">
+                <div class="list-hotel-partners">
+                    <img src="./img/flc-60a5ca70a105bKS.png" alt="">
+                    <img src="./img/fusion-60a5d1498a891KS.png" alt="">
+                    <img src="./img/novotel-60a5d012d01fdKS.png" alt="">
+                    <img src="./img/pullman-60a5d0e4c462bKS.png" alt="">
+                </div>
+                <div class="list-hotel-partners bot">
+                    <img src="./img/flamingo-60a5ca4f2579aKS.png" alt="">
+                    <img src="./img/vinpearl-60a38473df5a4KS.png" alt="">
+                    <img src="./img/muong-thanh-60a5ced607f53KS.png" alt="">
+                    <img src="./img/intercontinental-60a5d24444474KS.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="prize">
+            <div class="prize-title">
+                <p>Thành tựu & giải thưởng</p>
+            </div>
+            <div class="prize-list">
+                <div class="prize-list1">
+                    <div class="img-prize">
+                        <img src="./img/prz1.png" alt="">
+                    </div>
+                    <div class="info-prize">
+                        <p>Top 10 Dịch vụ du lịch được yêu thích nhất</p>
+                    </div>
+                </div>
+                <div class="prize-list1">
+                    <div class="img-prize">
+                        <img src="./img/prz2.png" alt="">
+                    </div>
+                    <div class="info-prize">
+                        <p>Công ty có khách đặt tour trực tuyến nhiều nhất năm</p>
+                    </div>
+                </div>
+                <div class="prize-list1">
+                    <div class="img-prize">
+                        <img src="./img/prz3.png" alt="">
+                    </div>
+                    <div class="info-prize">
+                        <p>Chứng nhận Travelers' Choice từ Tripadvisor</p>
+                    </div>
+                </div>
+                <div class="prize-list1">
+                    <div class="img-prize">
+                        <img src="./img/prz4.png" alt="">
+                    </div>
+                    <div class="info-prize">
+                        <p>Đối tác chiến lược hàng đầu của Vinpearl</p>
+                    </div>
+                </div>
+                <div class="prize-list1">
+                    <div class="img-prize">
+                        <img src="./img/prz5.png" alt="">
+                    </div>
+                    <div class="info-prize">
+                        <p>Top Đại lý xuất sắc của các hãng hàng không</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footerWeb">
+        <div class="form-dk-email">
+            <div class="info-dk-email">
+                <div class="icon-info-dk-email">
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+                <div class="text-info-dk-email">
+                    <div class="text-info-dk-email-top">
+                        <p>Cơ hội giảm giá tới <span>50%</span></p>
+                    </div>
+                    <div class="text-info-dk-email-bot">
+                        <p>Hãy đăng ký ngay để nhận ưu đãi bí mật từ FlyAndChill nhé!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="input-dk-email">
+                <input type="text" placeholder="Nhập email của bạn">
+                <button>Nhận voucher ngay</button>
+            </div>
+        </div>
+        <div class="info-footer">
+
+            <div class="info-cty">
+                <div class="info-cty-left">
+                    <div class="address">
+                        <h1>FlyAndChill</h1>
+                        <p><i class="fa-solid fa-location-dot"></i> Thôn 2, Đại Yên, Chương Mỹ, Hà Nội. <span>(024)
+                                01082004</span></p>
+                    </div>
+                    <div class="business-license">
+                        <p>Giấy phép kinh doanh số: 1800100co. Ngày cấp: 32/13/2099. Nơi cấp: Sở KH & ĐT TP Hà Nội.</p>
+                        <p>Giấy phép kinh doanh Lữ Hành Quốc Tế số 12-3456/2099/TCDL- GPLHQT</p>
+                    </div>
+
+                </div>
+                <div class="info-cty-right">
+                    <div class="dowload">
+                        <div class="dowload-title">
+                            <p>Tải ứng dụng FlyAndChill</p>
+                        </div>
+                        <div class="dowload-img">
+                            <img src="./img/dowAppStore.svg" alt="">
+                            <img src="./img/dowgg.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

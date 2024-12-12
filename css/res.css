@@ -1,0 +1,106 @@
+    /* mobile */
+    
+    @media only screen and (max-width:46.1875em) {}
+    /* tablet */
+    
+    @media only screen and (min-width:46.25em) and(max-width: 63.9375em) {}
+    
+    @media only screen and (max-width:87.5em) {
+        .khachsan,
+        .vemaybay,
+        .tourdulich {
+            display: none;
+        }
+    }
+    
+    @media only screen and (max-width:57.125em) {
+        .menu,
+        .dn,
+        .dk,
+        .search {
+            display: none;
+        }
+        .icon-bar button {
+            display: block;
+        }
+    }
+    
+    @media only screen and (max-width:1005px) {
+        .title-slogan {
+            border-right: none;
+        }
+        .introduce {
+            display: block;
+        }
+        .solgan {
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        .introduce-list {
+            justify-content: space-evenly;
+        }
+    }
+    
+    @media only screen and (max-width:1415px) {
+        .fly-ticket {
+            width: 100%;
+            transform: none;
+        }
+        .hotel {
+            width: 100%;
+            transform: none;
+        }
+        .tour {
+            width: 100%;
+            transform: none;
+        }
+    }
+    
+    @media only screen and (max-width:850px) {
+        .fly-ticket {
+            display: block;
+        }
+        .hotel {
+            display: block;
+        }
+        .tour {
+            display: block;
+        }
+        .btn-home-search-ticket button {
+            margin: 20px 0;
+            width: 95%;
+            height: 50px;
+        }
+        .btn-home-search-ticket {
+            text-align: center;
+        }
+        .btn-home-search-tour button {
+            margin: 20px 0;
+            width: 95%;
+            height: 50px;
+        }
+        .btn-home-search-tour {
+            text-align: center;
+        }
+        .introduce {
+            margin-top: -95px;
+        }
+    }
+    
+    @media only screen and (max-width:822px) {
+        .home-search-menu>ul>li>a {
+            font-size: 19px;
+        }
+    }
+    
+    @media only screen and (max-width:742px) {
+        .home-search-menu>ul>li>a {
+            font-size: 15px;
+        }
+    }
+    
+    @media only screen and (max-width:631px) {
+        .home-search-menu>ul>li>a {
+            font-size: 13px;
+        }
+    }
